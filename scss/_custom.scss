@@ -1,0 +1,198 @@
+@font-face {
+    font-family: 'Helvetica Neue Bold';
+    src: url(../fonts/helvetica_neu_bold-webfont.woff2) format('woff2'), url(../fonts/helvetica_neu_bold-webfont.woff) format('woff');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap
+}
+
+@font-face {
+    font-family: 'Helvetica Neue Regular';
+    src: url('../fonts/HelveticaNeueRegular.woff2') format('woff2'),
+        url('../fonts/HelveticaNeueRegular.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Helvetica Neue Medium';
+    src: url('../fonts/HelveticaNeueMedium.woff2') format('woff2'),
+        url('../fonts/HelveticaNeueMedium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'DIN Condensed Bold';
+    src: url(../fonts/DINCondensed-Bold.woff2) format('woff2'), url(../fonts/DINCondensed-Bold.woff) format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap
+}
+
+@font-face {
+    font-family: 'Apple Chancery';
+    src: url(../fonts/Apple-Chancery.woff2) format('woff2'), url(../fonts/Apple-Chancery.woff) format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap
+}
+
+.nav {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: fixed;
+    right: 0;
+    padding: 10rem 3rem 0 3rem;
+    background: #fff;
+        ul li {
+            list-style: none;
+            a {
+                color: #D8D8D8;
+                transition: .32s ease;
+                font-family: 'DIN Condensed Bold';
+                font-size: 1.1rem;
+                padding: 0 1rem;
+                margin: .7rem 0;
+                &:hover {
+                    color: #798FBA;
+                }                
+            }
+            .is-active {
+                color: #798FBA;
+                border-left: solid 1px #798FBA;
+            }
+        }
+}
+
+.section-full {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.built-with {
+    color: #C3C3C3;
+    font-size: .8rem;
+}
+
+.intro-title {
+    color: #798FBA;
+    font-size: 2rem;
+    margin: 0;
+    line-height: 1;
+}
+
+#second .intro-title:not(.first-title), #third .intro-title:not(.first-title) {
+    border-left: solid 4px;
+    padding: 0 .6rem;
+    height: 39px;
+}
+
+.intro-subtitle {
+    font-size: 1.4em;
+    line-height: 1;
+}
+
+.intro-subtitle {
+    color: #000;
+    &:after {
+        content: '';
+        display: block;
+        height: 1px;
+        width: 38px;
+        background: #798FBA;
+        margin: 10px 0;
+    }
+}
+
+.intro-title, 
+.intro-subtitle {
+    font-family: 'DIN Condensed Bold';
+}
+
+.fas {
+    color: #798FBA;
+    font-size: 1.4rem;
+}
+
+.menu {
+    border-left: solid 1px #D8D8D8;
+}
+
+.ampersand {
+    font-family: 'Apple Chancery';
+    color: #798FBA;
+}
+
+section p, ul {
+    color: #707070;
+    list-style: none;
+    font-family: 'Helvetica Neue Medium';
+}
+
+#fourth .section-full {
+    height: 300vh;
+        .cell {
+            padding: 1.5rem 1.5rem;
+            margin: 1.5rem 0;
+            
+        }
+        .cell:nth-child(even) {
+            border-left: solid 5px #798FBA;
+        }
+        .cell:nth-child(odd):not(:first-child) {
+            background:#F7F7F7;
+            box-shadow: 0 2px 0 #C3C3C3;
+        }
+       
+}
+
+@media (max-width: 992px) {
+    .nav {
+        display: initial;
+        top: 0;
+        padding: 1rem 1rem 1rem 1rem;
+        height: initial;
+        box-shadow: 0 2px 4px #e8e8e8;
+        z-index: 1;
+    }
+    .menu {
+        border-left: none;
+        
+    }
+    .vertical {
+        flex-direction: row!important;
+    }
+    .is-active {
+        border-left: none!important;
+    }
+
+    #fourth .section-full .cell:nth-child(even) {
+        margin: 1rem 1rem;
+    }
+    #fourth .section-full .cell:nth-child(odd) {
+        margin: 1rem 1rem;
+    }
+}
+
+@media (max-width: 585px) {
+    #fourth {
+        .section-full {
+            height: initial!important;
+        }
+    }
+    .intro-title {
+        height: initial!important;
+    }
+    nav {
+        li {
+            a {
+                font-size: .9rem!important;
+            }
+        }
+    }
+}
