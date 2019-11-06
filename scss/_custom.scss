@@ -183,6 +183,18 @@ section p, ul {
     }
 }
 
+@media(min-width: 585px) {
+    .arrow-down-more {
+        svg {
+            position: absolute;
+            bottom: 25px;
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+        }
+    }
+}
+
 @media (max-width: 585px) {
     .section-full {
             height: initial!important;
@@ -196,6 +208,15 @@ section p, ul {
                 font-size: .9rem!important;
             }
         }
+    }
+    .arrow-down-more {
+       display: none;
+    }
+}
+@media(max-width: 662px) {
+    #third .bac .cell {
+        margin: 1rem 0!important;
+        box-shadow: none;
     }
 }
 
